@@ -1,3 +1,3 @@
 <h1>{{title}}</h1>
-<app-search-bar></app-search-bar>
-<app-job-cards></app-job-cards>
+<app-search-bar (OutputFilters)="getFilteredResults($event)" ></app-search-bar>
+<app-job-cards [jobs]="jobs"></app-job-cards>

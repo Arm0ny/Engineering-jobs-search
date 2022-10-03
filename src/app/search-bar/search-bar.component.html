@@ -1,6 +1,22 @@
-<form [formGroup]="filtersForm">
-  <mat-form-field>
+<form [formGroup]="filtersForm" (ngSubmit)="onSubmit()">
+  <p>Filter By:</p>
+
+  <mat-form-field appearance="fill">
     <mat-label>City</mat-label>
     <input matInput type="text" formControlName="city"/>
   </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Level</mat-label>
+    <mat-select formControlName="level">
+      <mat-option value= "Internship">Internship</mat-option>
+      <mat-option value= "Entry Level">Entry Level</mat-option>
+      <mat-option value= "Mid Level">Mid Level</mat-option>
+      <mat-option value= "Senior Level">Senior Level</mat-option>
+      <mat-option value= "management">Management</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <button mat-raised-button type="submit" color="primary">Search</button>
 </form>

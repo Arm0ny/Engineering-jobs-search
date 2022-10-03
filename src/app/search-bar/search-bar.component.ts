@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";
 import {JobsService} from "../jobs.service";
@@ -10,18 +10,28 @@ import {JobsService} from "../jobs.service";
 })
 export class SearchBarComponent implements OnInit {
   filtersForm! : FormGroup
-  filter?: string
   constructor(private jobService : JobsService) { }
+  @Output() OutputFilters = new EventEmitter<{city: string, level: string}>()
+
+  filters! : {
+    city: string,
+    level: string
+  }
 
   ngOnInit(): void {
     this.filtersForm = new FormGroup({
-      city: new FormControl()
+      city: new FormControl('Rome, Italy'),
+      level: new FormControl(''),
     })
   }
 
   onSubmit(): void{
-    this.filter = this.filtersForm.get('city')?.value
-    this.jobService.getJobs(1, this.filter)
+    const {city, level} = this.filtersForm.getRawValue();
+    this.filters = {
+      city,
+      level
+    }
+    this.OutputFilters.emit(this.filters)
   }
 
 }
