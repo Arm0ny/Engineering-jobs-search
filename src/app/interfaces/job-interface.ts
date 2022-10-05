@@ -18,7 +18,7 @@ export interface JobInterface {
   model_type?: string;
   id? : number,
   locations: LocationInterface[],
-  level: LevelsInterface[],
+  levels: LevelsInterface[],
   company: CompanyInterface,
 }
 

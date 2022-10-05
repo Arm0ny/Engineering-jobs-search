@@ -13,15 +13,19 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatGridListModule} from "@angular/material/grid-list";
-import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatSelectModule} from "@angular/material/select";
 import {MatChipsModule} from "@angular/material/chips";
+import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { JobDetailsComponent } from './job-details/job-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    JobCardsComponent
+    JobCardsComponent,
+    HomeComponent,
+    JobDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +38,9 @@ import {MatChipsModule} from "@angular/material/chips";
     MatCardModule,
     MatDividerModule,
     MatGridListModule,
-    FlexLayoutModule,
     MatSelectModule,
     MatChipsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
