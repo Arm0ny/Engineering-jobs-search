@@ -1,3 +1,5 @@
+
+
 export interface APIResponseInterface {
   page?: number,
   page_count?: number,
@@ -10,16 +12,18 @@ export interface APIResponseInterface {
 
 
 export interface JobInterface {
-  contents: string,
-  name: string,
+  contents?: string,
+  name?: string,
   type?: string,
   publication_date?: string,
   short_name?: string,
   model_type?: string;
   id? : number,
-  locations: LocationInterface[],
-  levels: LevelsInterface[],
-  company: CompanyInterface,
+  locations?: LocationInterface[],
+  levels?: LevelsInterface[],
+  company?: {
+    name : string
+  },
 }
 
 export interface LocationInterface{
@@ -31,8 +35,4 @@ export interface LevelsInterface{
   short_name?: string
 }
 
-export interface CompanyInterface{
-  id: number,
-  name: string,
-  short_name: string
-}
+

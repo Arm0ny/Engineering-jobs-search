@@ -1,0 +1,14 @@
+<a routerLink="/" mat-raised-button color="white" mat-fab aria-label="Go Back" mat-button class="back-button">
+  <mat-icon color="primary">keyboard_arrow_left</mat-icon>
+</a>
+<main class="content">
+  <h1>Company:
+    <a mat-raised-button color="primary" (click)="onClick(selectedJob.company.id)">{{selectedJob.company.name}}
+      <mat-icon *ngIf="!showCompanyDetails else closeIcon">info</mat-icon>
+      <ng-template #closeIcon><mat-icon>close</mat-icon></ng-template>
+    </a>
+  </h1>
+  <mat-divider></mat-divider>
+  <app-company-details [companyId]="selectedJob.company.id" *ngIf="showCompanyDetails"></app-company-details>
+  <div [innerHtml]="selectedJob.contents"></div>
+</main>

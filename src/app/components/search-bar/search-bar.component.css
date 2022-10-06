@@ -1,0 +1,8 @@
+form{
+  padding: 1rem 2rem;
+  background: white
+}
+
+mat-form-field{
+  margin-right: 1rem
+}

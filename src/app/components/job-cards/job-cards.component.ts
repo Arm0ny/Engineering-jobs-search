@@ -1,6 +1,6 @@
 import {Component, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
-import {JobsService} from "../jobs.service";
-import {JobInterface, LocationInterface} from "../interfaces/job-interface";
+import {JobsService} from "../../services/jobs.service";
+import {JobInterface, LocationInterface} from "../../interfaces/job-interface";
 import {Input} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {Subscription} from "rxjs";

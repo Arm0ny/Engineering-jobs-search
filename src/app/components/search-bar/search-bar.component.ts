@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnChanges, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";
-import {JobsService} from "../jobs.service";
+import {JobsService} from "../../services/jobs.service";
 
 @Component({
   selector: 'app-search-bar',

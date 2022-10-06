@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Observable, map, of} from "rxjs";
 
-import {APIResponseInterface, JobInterface} from "./interfaces/job-interface";
+import {APIResponseInterface, JobInterface} from "../interfaces/job-interface";
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {CustomHttpParamsEncoder} from "./encoders/CustomHttpParamsEncoder";
+import {CustomHttpParamsEncoder} from "../encoders/CustomHttpParamsEncoder";
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +37,7 @@ export class JobsService {
     return this.http.get<APIResponseInterface>(this.url, {params})
   }
 
-  getJobById(id: string){
+  getJobById(id: string | null){
     return this.http.get<APIResponseInterface>(`${this.url}/${id}`)
   }
 

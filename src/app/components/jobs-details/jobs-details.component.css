@@ -1,0 +1,10 @@
+.content{
+  padding: 5rem 3rem;
+  width: 80%;
+  margin: auto;
+  background: white;
+}
+
+.back-button{
+  position: fixed;
+}

@@ -8,3 +8,7 @@ main {
 .card {
   width: 20rem;
 }
+
+mat-card-title{
+  font-size : 1.25rem
+}
