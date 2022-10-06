@@ -1,4 +1,4 @@
-<main id="content" *ngIf="jobs.length; else elseBlock" >
+<main id="content" *ngIf="jobs.length else elseBlock" >
   <mat-card class= "card" *ngFor="let job of jobs">
     <mat-card-title>{{job.name}}</mat-card-title>
     <mat-card-subtitle>Locations: <span *ngFor="let location of job.locations">{{location.name + ' '}}</span></mat-card-subtitle>
@@ -11,7 +11,7 @@
       </mat-chip-list>
     </mat-card-actions>
     <mat-card-footer>
-      <a mat-stroked-button routerLink="jobs/{{job.id}}">See More</a>
+      <a mat-stroked-button routerLink="/jobs/{{job.id}}">See More</a>
     </mat-card-footer>
   </mat-card>
 </main>

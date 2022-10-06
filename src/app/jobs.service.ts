@@ -14,14 +14,31 @@ export class JobsService {
 
   constructor(private http: HttpClient) {
   }
+  filters! : {
+    page : number,
+    city: string,
+    level: string
+  }
 
-  getJobs(page = 1, filters = {city: 'Rome, Italy', level: ''}): Observable<APIResponseInterface>{
+  setFilters(filters = {page: 1, city : 'Italy, Rome', level: ''}) : void{
+    this.filters = filters
+  }
+
+  getFilters() : {}{
+    return this.filters
+  }
+
+  getJobs(): Observable<APIResponseInterface>{
     const params = new HttpParams({encoder: new CustomHttpParamsEncoder()})
       .set('category', 'Science and Engineering')
-      .set('page', page)
-      .set('location', filters.city)
-      .set('level', filters.level)
+      .set('page', this.filters.page)
+      .set('location', this.filters.city)
+      .set('level', this.filters.level)
     return this.http.get<APIResponseInterface>(this.url, {params})
+  }
+
+  getJobById(id: string){
+    return this.http.get<APIResponseInterface>(`${this.url}/${id}`)
   }
 
 }

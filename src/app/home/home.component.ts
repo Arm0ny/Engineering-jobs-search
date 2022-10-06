@@ -10,8 +10,8 @@ import {JobInterface} from "../interfaces/job-interface";
 })
 export class HomeComponent implements OnInit {
 
-  public jobs!: JobInterface[]
   filters!: {
+    page: 1,
     city: string,
     level: string
   }
@@ -21,28 +21,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getJobs()
+    this.jobsService.setFilters()
   }
 
 
-  getJobs(page = 1, filters = {city: 'Rome, Italy', level: ''}): void {
-    this.jobsService.getJobs(page, filters)
-      .subscribe((response) => {
-        this.jobs = response.results.map(job => ({
-            id: job.id,
-            contents: job.contents,
-            name: job.name,
-            publication_date: job.publication_date,
-            locations: job.locations,
-            levels: job.levels,
-            company: job.company
 
-          })
-        )
-      })
-  }
-
-  getFilteredResults($event: { city: string; level: string; } | undefined){
-    this.getJobs(undefined, $event)
+  getFilteredResults($event: { page: 1, city: string; level: string }){
+    this.filters = $event
+    this.jobsService.setFilters(this.filters)
   }
 }

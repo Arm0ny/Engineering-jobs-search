@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnChanges, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {MatFormField} from "@angular/material/form-field";
 import {JobsService} from "../jobs.service";
@@ -8,12 +8,13 @@ import {JobsService} from "../jobs.service";
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css']
 })
-export class SearchBarComponent implements OnInit {
+export class SearchBarComponent implements OnInit{
   filtersForm! : FormGroup
   constructor(private jobService : JobsService) { }
-  @Output() OutputFilters = new EventEmitter<{city: string, level: string}>()
+  @Output() OutputFilters = new EventEmitter<{page : 1, city: string, level: string}>()
 
   filters! : {
+    page : 1
     city: string,
     level: string
   }
@@ -28,6 +29,7 @@ export class SearchBarComponent implements OnInit {
   onSubmit(): void{
     const {city, level} = this.filtersForm.getRawValue();
     this.filters = {
+      page : 1,
       city,
       level
     }

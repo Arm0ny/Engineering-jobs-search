@@ -17,7 +17,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatChipsModule} from "@angular/material/chips";
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { JobDetailsComponent } from './job-details/job-details.component';
+import { JobsDetailsComponent } from './jobs-details/jobs-details.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -25,23 +26,24 @@ import { JobDetailsComponent } from './job-details/job-details.component';
     SearchBarComponent,
     JobCardsComponent,
     HomeComponent,
-    JobDetailsComponent
+    JobsDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule,
-    MatDividerModule,
-    MatGridListModule,
-    MatSelectModule,
-    MatChipsModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule,
+        MatDividerModule,
+        MatGridListModule,
+        MatSelectModule,
+        MatChipsModule,
+        AppRoutingModule,
+        MatToolbarModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
