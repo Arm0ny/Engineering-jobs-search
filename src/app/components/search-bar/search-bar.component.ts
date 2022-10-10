@@ -1,6 +1,5 @@
-import {Component, EventEmitter, OnChanges, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {MatFormField} from "@angular/material/form-field";
 import {JobsService} from "../../services/jobs.service";
 
 @Component({

@@ -3,7 +3,7 @@
 </a>
 <main class="content">
   <h1>Company:
-    <a mat-raised-button color="primary" (click)="onClick(selectedJob.company.id)">{{selectedJob.company.name}}
+    <a mat-raised-button color="primary" (click)="onClick()">{{selectedJob.company.name}}
       <mat-icon *ngIf="!showCompanyDetails else closeIcon">info</mat-icon>
       <ng-template #closeIcon><mat-icon>close</mat-icon></ng-template>
     </a>

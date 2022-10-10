@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Observable, map, of} from "rxjs";
+import {Observable} from "rxjs";
 
 import {APIResponseInterface, JobInterface} from "../interfaces/job-interface";
 import {HttpClient, HttpParams} from "@angular/common/http";
@@ -20,7 +20,7 @@ export class JobsService {
     level: string
   }
 
-  setFilters(filters = {page: 1, city : 'Italy, Rome', level: ''}) : void{
+  setFilters(filters = {page: 1, city : 'Rome, Italy', level: ''}) : void{
     this.filters = filters
   }
 
@@ -38,7 +38,7 @@ export class JobsService {
   }
 
   getJobById(id: string | null){
-    return this.http.get<APIResponseInterface>(`${this.url}/${id}`)
+    return this.http.get<JobInterface>(`${this.url}/${id}`)
   }
 
 }

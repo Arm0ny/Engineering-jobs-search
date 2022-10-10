@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {JobsService} from "../../services/jobs.service";
-import {JobInterface} from "../../interfaces/job-interface";
 
 
 @Component({

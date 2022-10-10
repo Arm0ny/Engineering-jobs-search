@@ -1,7 +1,8 @@
 import {LocationInterface} from "./job-interface";
 
 export interface CompanyInterface{
-  name?: string,
+  id: number,
+  name: string,
   description: string,
   locations :  LocationInterface[],
   size : {

@@ -2,7 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {JobsService} from "../../services/jobs.service";
 import {Subscription} from "rxjs";
-import {CompaniesService} from "../../services/companies.service";
+import {JobInterface} from "../../interfaces/job-interface";
+
 
 @Component({
   selector: 'app-jobs-details',
@@ -13,7 +14,7 @@ export class JobsDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private jobsService : JobsService, private route : ActivatedRoute) { }
   jobId! : string | null
-  selectedJob? : any
+  selectedJob! : JobInterface
   showCompanyDetails: boolean = false;
 
   subscription! : Subscription
@@ -31,7 +32,7 @@ export class JobsDetailsComponent implements OnInit, OnDestroy {
   }
 
 
-  onClick($event : number) {
+  onClick() {
     this.showCompanyDetails = !this.showCompanyDetails
   }
 

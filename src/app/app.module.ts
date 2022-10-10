@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
@@ -21,6 +21,7 @@ import { JobsDetailsComponent } from './components/jobs-details/jobs-details.com
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { CompanyDetailsComponent } from './components/company-details/company-details.component';
 import {MatIconModule} from "@angular/material/icon";
+import {ErrorCatchingInterceptor} from "./interceptors/httperrors.interceptor";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,13 @@ import {MatIconModule} from "@angular/material/icon";
         MatToolbarModule,
         MatIconModule
     ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorCatchingInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

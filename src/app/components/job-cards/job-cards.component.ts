@@ -1,8 +1,7 @@
 import {Component, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 import {JobsService} from "../../services/jobs.service";
-import {JobInterface, LocationInterface} from "../../interfaces/job-interface";
+import {JobInterface} from "../../interfaces/job-interface";
 import {Input} from "@angular/core";
-import {ActivatedRoute} from "@angular/router";
 import {Subscription} from "rxjs";
 
 
@@ -13,10 +12,10 @@ import {Subscription} from "rxjs";
 })
 export class JobCardsComponent implements OnInit, OnChanges, OnDestroy{
 
-  constructor(private jobsService : JobsService, private route : ActivatedRoute) { }
+  constructor(private jobsService : JobsService) { }
 
-  subscription? : Subscription
-  jobs! : JobInterface[]
+  subscription! : Subscription
+  jobs : JobInterface[] = []
   @Input() filters : {
     page: 1;
     city: string;
@@ -24,14 +23,12 @@ export class JobCardsComponent implements OnInit, OnChanges, OnDestroy{
   } | undefined
 
 
-  jobId : any
-
   ngOnChanges(changes: SimpleChanges) {
     this.getJobs()
   }
 
   ngOnInit(): void {
-    this.getJobs()
+
     }
 
    ngOnDestroy() {
@@ -49,6 +46,7 @@ export class JobCardsComponent implements OnInit, OnChanges, OnDestroy{
             locations: job.locations,
             levels: job.levels,
             company: job.company
+
 
           })
         )

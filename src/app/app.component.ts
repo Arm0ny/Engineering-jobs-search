@@ -1,3 +1,5 @@
+// noinspection ES6UnusedImports
+
 import {Component, OnInit} from '@angular/core';
 
 @Component({
