@@ -96,6 +96,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Engineering-jobs-search:build:production",
+            "firebaseProject": "engineering-jobs-search",
+            "firebaseHostingSite": "engineering-jobs-search"
+          }
         }
       }
     }
