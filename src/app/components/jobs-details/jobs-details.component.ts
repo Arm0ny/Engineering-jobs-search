@@ -13,8 +13,8 @@ import {JobInterface} from "../../interfaces/job-interface";
 export class JobsDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private jobsService : JobsService, private route : ActivatedRoute) { }
-  jobId! : string | null
-  selectedJob! : JobInterface
+  jobId: string | null = ''
+  selectedJob? : JobInterface
   showCompanyDetails: boolean = false;
 
   subscription! : Subscription

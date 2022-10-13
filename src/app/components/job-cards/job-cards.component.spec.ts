@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { JobCardsComponent } from './job-cards.component';
+import {JobsService} from "../../services/jobs.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('JobCardsComponent', () => {
   let component: JobCardsComponent;
@@ -8,7 +10,9 @@ describe('JobCardsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JobCardsComponent ]
+      declarations: [ JobCardsComponent ],
+      imports: [HttpClientTestingModule],
+      providers: [JobsService]
     })
     .compileComponents();
 

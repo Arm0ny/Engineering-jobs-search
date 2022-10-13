@@ -21,7 +21,7 @@ import { JobsDetailsComponent } from './components/jobs-details/jobs-details.com
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { CompanyDetailsComponent } from './components/company-details/company-details.component';
 import {MatIconModule} from "@angular/material/icon";
-import {ErrorCatchingInterceptor} from "./interceptors/httperrors.interceptor";
+import {HttperrorsInterceptor} from "./interceptors/httperrors.interceptor";
 
 @NgModule({
   declarations: [
@@ -52,7 +52,7 @@ import {ErrorCatchingInterceptor} from "./interceptors/httperrors.interceptor";
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: ErrorCatchingInterceptor,
+      useClass: HttperrorsInterceptor,
       multi: true
     }
   ],

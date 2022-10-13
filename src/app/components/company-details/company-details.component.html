@@ -1,4 +1,4 @@
-<article class="company-details">
+<article *ngIf="company" class="company-details">
   <h4>COMPANY DETAILS</h4>
   <div class="company-description">
     <h5>DESCRIPTION</h5>
@@ -7,7 +7,7 @@
   <div class="company-locations">
     <h5>LOCATIONS</h5>
     <p>We are in:
-      <span *ngFor="let location of company.locations">{{location.name}},</span>
+      <span *ngFor="let location of company?.locations">{{location.name}},</span>
     </p>
   </div>
   <div class="company-size">

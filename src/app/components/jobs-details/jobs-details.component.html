@@ -1,7 +1,7 @@
 <a routerLink="/" mat-raised-button color="white" mat-fab aria-label="Go Back" mat-button class="back-button">
   <mat-icon color="primary">keyboard_arrow_left</mat-icon>
 </a>
-<main class="content">
+<main class="content" *ngIf="selectedJob">
   <h1>Company:
     <a mat-raised-button color="primary" (click)="onClick()">{{selectedJob.company.name}}
       <mat-icon *ngIf="!showCompanyDetails else closeIcon">info</mat-icon>

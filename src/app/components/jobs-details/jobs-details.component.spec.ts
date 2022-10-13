@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { JobsDetailsComponent } from './jobs-details.component';
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {JobsService} from "../../services/jobs.service";
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('JobsDetailsComponent', () => {
   let component: JobsDetailsComponent;
@@ -8,7 +11,12 @@ describe('JobsDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JobsDetailsComponent ]
+      declarations: [ JobsDetailsComponent ],
+      imports: [
+        RouterTestingModule.withRoutes([]),
+        HttpClientTestingModule
+      ],
+      providers: [JobsService]
     })
     .compileComponents();
 

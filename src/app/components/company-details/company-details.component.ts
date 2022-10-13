@@ -10,8 +10,8 @@ import {Subscription} from "rxjs";
 })
 export class CompanyDetailsComponent implements OnInit, OnChanges, OnDestroy {
   @Input() companyId!: number
-  company! : CompanyInterface
-  subscription! : Subscription
+  company? : CompanyInterface
+  subscription? : Subscription
   constructor(private companiesService : CompaniesService) { }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -25,7 +25,7 @@ export class CompanyDetailsComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe()
+    this.subscription?.unsubscribe()
   }
 }
 

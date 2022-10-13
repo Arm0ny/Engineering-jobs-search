@@ -4,7 +4,7 @@ import {Observable, throwError} from 'rxjs';
 import {catchError} from "rxjs/operators";
 
 @Injectable()
-export class ErrorCatchingInterceptor implements HttpInterceptor {
+export class HttperrorsInterceptor implements HttpInterceptor {
 
   constructor() {
   }
