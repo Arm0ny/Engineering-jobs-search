@@ -155,7 +155,8 @@ Your view will change to show the announce's details like this:
 
 ![details-screenshot]
 
-As you czn see the company name is a button element, click on it to get insormations on the company whose published the announce:
+As you can see the company name is a button element, click on it to get insormations on the company whose published the announce:
+
 ![company-details-screenshot]
 
 ### Setting Filters
