@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {Component, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {JobsService} from "../../services/jobs.service";
 import {JobInterface} from "../../interfaces/job-interface";
 import {Input} from "@angular/core";
@@ -10,7 +10,7 @@ import {Subscription} from "rxjs";
   templateUrl: './job-cards.component.html',
   styleUrls: ['./job-cards.component.css']
 })
-export class JobCardsComponent implements OnInit, OnChanges, OnDestroy{
+export class JobCardsComponent implements OnChanges, OnDestroy{
 
   constructor(private jobsService : JobsService) { }
 
@@ -27,9 +27,6 @@ export class JobCardsComponent implements OnInit, OnChanges, OnDestroy{
     this.getJobs()
   }
 
-  ngOnInit(): void {
-
-    }
 
    ngOnDestroy() {
     this.subscription?.unsubscribe()

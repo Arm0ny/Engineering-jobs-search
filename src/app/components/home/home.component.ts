@@ -16,8 +16,7 @@ export class HomeComponent implements OnInit {
   }
   constructor(
     private jobsService: JobsService
-  ) {
-  }
+  ) { }
 
   ngOnInit() {
     this.jobsService.setFilters()

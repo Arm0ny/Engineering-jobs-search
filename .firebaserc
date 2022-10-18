@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "engineering-jobs-search": {
+      "hosting": {
+        "Engineering-jobs-search": [
+          "engineering-jobs-search"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "engineering-jobs-search"
+  }
+}
