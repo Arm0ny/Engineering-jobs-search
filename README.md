@@ -36,6 +36,8 @@
 
   <h3 align="center">Best-README-Template</h3>
 
+  <a style="border: 3px solid; text-align: center; padding: 8px 16px">Try It Out</a>
+
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
@@ -130,7 +132,7 @@ npm install -g @angular/cli
 ### Running a local server
 
 to start the server ad use the application you can run:
-```
+```sh
 ng serve
 ```
 a message with the local server URL should appear on your console, navigate to that to open the app into the browser
@@ -142,28 +144,30 @@ a message with the local server URL should appear on your console, navigate to t
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+when you open the app you are prompted to the home page showing the active jobs announces for the **Rome, Italy** location like this:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+to get more infos on a selected job you can click the **_see more_** button on the bottom of each card.
 
 
+Your view will change to show the announce's details like this:
 
-<!-- ROADMAP -->
-## Roadmap
+![details-screenshot]
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+As you czn see the company name is a button element, click on it to get insormations on the company whose published the announce:
+![company-details-screenshot]
 
-See the [open issues](https://github.com/Arm0ny/Engineering-jobs-search/issues) for a full list of proposed features (and known issues).
+### Setting Filters
+in the home page you can set custom research filters using the form at the top of the page:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![filters-form-screenshot]
+
+inside the **_city Field_** format the filter as shown in the example
+**NB: uppercase, spaces and commas MUST be respected**
+
+_if the search returns wrong results, the "levels" field can be used independently, leaving the "city" field empty_
+
 
 
 
@@ -197,29 +201,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Project Link: [https://github.com/Armony/Engineering-jobs-search](https://github.com/your_username/repo_name)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Email: armando.pagano2001@gmail.com
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+website: [Link][website-link]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 
@@ -237,7 +227,11 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/Arm0ny/Engineering-jobs-search/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/armando-pagano-67787916a
+[website-link]: http://mando-webdev.web.app
 [product-screenshot]: img/screenshot.png
+[details-screenshot]: img/details-screenshot.png
+[company-details-screenshot]: img/company-details-screenshot.png
+[filters-form-screenshot]: img/filters-form-screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
