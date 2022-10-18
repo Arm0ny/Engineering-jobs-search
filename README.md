@@ -34,7 +34,7 @@
     <img src="img/logo.png" alt="Logo">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Angular Engineering Jobs Search</h3>
 
   <a href="https://engineering-jobs-search.web.app" style="border: 3px solid; text-align: center; padding: 8px 16px">Try It Out</a>
 
