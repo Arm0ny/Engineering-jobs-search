@@ -155,6 +155,7 @@ Your view will change to show the announce's details like this:
 
 ![details-screenshot]
 
+
 As you can see the company name is a button element, click on it to get insormations on the company whose published the announce:
 
 ![company-details-screenshot]
@@ -166,7 +167,6 @@ in the home page you can set custom research filters using the form at the top o
 
 inside the **_city Field_** format the filter as shown in the example
 **NB: uppercase, spaces and commas MUST be respected**
-
 _if the search returns wrong results, the "levels" field can be used independently, leaving the "city" field empty_
 
 
