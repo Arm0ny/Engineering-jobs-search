@@ -165,7 +165,7 @@ in the home page you can set custom research filters using the form at the top o
 
 ![filters-form-screenshot]
 
-inside the **_city Field_** format the filter as shown in the example
+inside the **_city Field_** format the filter as shown in the example  
 **NB: uppercase, spaces and commas MUST be respected**
 _if the search returns wrong results, the "levels" field can be used independently, leaving the "city" field empty_
 
