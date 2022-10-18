@@ -36,7 +36,7 @@
 
   <h3 align="center">Best-README-Template</h3>
 
-  <a style="border: 3px solid; text-align: center; padding: 8px 16px">Try It Out</a>
+  <a href="https://engineering-jobs-search.web.app" style="border: 3px solid; text-align: center; padding: 8px 16px">Try It Out</a>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
